@@ -146,5 +146,4 @@ Stage 1/2 將「合理估算範圍」（plausible estimate range）與統計信�
 - 八模組、元件介面和五個流程圖：[docs/design/architecture.md](docs/design/architecture.md)
 - A–H 演算法、偽碼與測例：[docs/design/algorithms.md](docs/design/algorithms.md)
 - 資料集、標註、指標及使用者研究：[docs/design/evaluation-plan.md](docs/design/evaluation-plan.md)
-- Stage 3 驗證、風險及判定：[docs/reviews/stage3-validation.md](docs/reviews/stage3-validation.md)
 - 原始設計來源：`references/期中Proposal_熱量AI_Agent.docx`「五、Proposed Scheme / Proposed Design」及原始 flowchart/pseudocode；`references/DietSense_Proposal_Presentation.pptx` 第 12–21 張。

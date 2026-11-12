@@ -1,32 +1,3 @@
-# DietSense — Project Proposal
+# DietSense：對話式 AI 飲食熱量分析系統
 
-**GitHub repository:** [wujin57/AIOT-DIC3](https://github.com/wujin57/AIOT-DIC3) (default branch: `main`)
-
-DietSense is an academic proposal for a conversational, Traditional Chinese domain AI agent that would help record and estimate daily calorie intake from Taiwanese meal descriptions. This repository contains research and design documentation only. **A working application has not been implemented, and no experiments or user studies have been conducted.**
-
-## Research scope
-
-The proposal studies whether structured nutrition-data retrieval, bounded clarification, deterministic nutrient calculation, source traceability, and explicit uncertainty handling can support auditable logging of Taiwanese mixed dishes. The proposed evaluation includes a planned 500-item food-description dataset, a fixed manual-search baseline, and a 20-participant, seven-day feasibility study. The study is prospective and does not claim clinical effectiveness.
-
-## Main documents
-
-- [Final integrated proposal](docs/final/DietSense-Final-Proposal.md)
-- [Requirements compliance matrix](docs/final/requirements-compliance-matrix.md)
-- [Reference mapping](docs/final/reference-mapping.md)
-- [Submission checklist](docs/final/submission-checklist.md)
-- [Stage 6 final validation](docs/reviews/stage6-final-validation.md)
-- [DESIGN.md](DESIGN.md)
-
-## Architecture overview
-
-The proposed design retains eight conceptual modules: user interface, conversation manager, LLM planner, retrieval, Analytics Engine, Domain Knowledge, database, and API Gateway. The LLM handles language and workflow planning; a deterministic calculation module handles numeric outputs using retrieved, versioned nutrition records. Unknown nutrients remain unknown rather than being treated as zero. Safety, privacy, and source governance are design proposals, not implemented controls.
-
-Detailed supporting material is in `docs/design/` (architecture, algorithms, evaluation plan), `docs/research/` (evidence ledgers, literature records and Deep Research), `docs/refactored/` (Stages 1, 4 and 5 academic sections), and `docs/reviews/` (stage-specific validation and change logs). Instructor-provided documents remain in the local `references/` directory and are excluded from version control until redistribution permission is confirmed.
-
-## Known limitations
-
-The proposal's dataset, baselines, sample size and candidate thresholds remain prospective. Literature search was scope-based rather than a systematic review. Food-source coverage, recipe licensing, reference-label reliability, ethics review, protocol details and expert review remain to be completed. Mermaid diagrams were manually inspected but not parser-validated. Final reference metadata requires a final publisher-record spot-check. This handover is prepared for the `main` branch; no commit or push has been made.
-
-## How to review
-
-Start with the final proposal, then use the compliance matrix to trace instructor and A2Z requirements. The reference mapping translates stage-local IDs to the final numbered bibliography. The checklist distinguishes proposal-stage deliverables from later final-handover requirements. No installation or execution instructions are provided because there is no application to run.
+飲食自我監測是體重管理研究的重要工具，但台灣日常餐點常以混合料理、地方名稱及模糊份量被描述，傳統資料庫輸入容易造成搜尋負擔、配方錯配與估算假精確。本研究提出 DietSense，一個面向繁體中文台灣飲食情境的對話式領域 AI Agent，研究如何把自然語言理解、營養資料檢索與可重算的數值分析整合為可追溯的記錄流程。系統規劃由使用者介面、對話管理、LLM Planner、資料檢索、Analytics Engine、Domain Knowledge、資料庫及 API Gateway 八個概念模組組成；大型語言模型負責解析意圖、食物與份量欄位及安排工具流程，RAG 從 USDA FoodData Central、台灣食品成分資料及具來源的在地食譜候選中檢索，確定性計算再依確認的克數與營養密度求得熱量及巨量營養素。遇到品牌、配方或份量不足時，系統提出有限次澄清，或降級為部分結果、合理估算範圍或只保存文字，並區分未知值與零值，不將估算範圍宣稱為統計信賴區間。研究預計建立五百筆繁體中文台灣餐點描述與參照標籤，和固定版本人工搜尋流程比較食物識別、熱量及巨量營養素誤差、來源追溯、完成率、記錄時間與澄清負擔，另規劃二十名成人七日可行性研究及 SUS 評估。上述資料蒐集、招募與實驗均尚未完成，候選門檻不是研究結果。預期貢獻是可檢驗的資料標註與評估流程、具來源治理的八模組設計，以及對台灣混合料理記錄限制的實證描述；本研究不主張臨床療效，並受資料覆蓋、配方代表性、樣本規模、授權、倫理審查與營養專業驗證所限。
