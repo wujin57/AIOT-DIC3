@@ -1,0 +1,48 @@
+# macOS / editor metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Temporary files, logs, caches and generated scratch data
+*.tmp
+*.temp
+*.log
+/tmp/
+/temp/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+
+# Dependency and virtual-environment directories
+node_modules/
+.venv/
+venv/
+env/
+virtualenv/
+
+# Credentials and local environment configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+token.json
+secrets.*
+token.*
+
+# Instructor-provided source documents are retained locally until redistribution
+# permission is confirmed. They are not included in this repository.
+references/
